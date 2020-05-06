@@ -1,0 +1,61 @@
+{
+  "name": "impressit_test_assignment",
+  "version": "1.0.0",
+  "description": "Impressit test assignment",
+  "main": "index.js",
+  "scripts": {
+    "build": "npm install && serverless dynamodb install",
+    "start": "serverless offline start && sls dynamodb start",
+    "test": "npx jest --runInBand",
+    "eslint": "npx eslint --ignore-pattern 'node_modules' .",
+    "eslint-fix": "npx eslint --fix --ignore-pattern 'node_modules' ."
+  },
+  "keywords": [
+    "Impressit"
+  ],
+  "author": "Kostiantyn Cherno",
+  "license": "ISC",
+  "dependencies": {
+    "aws-sdk": "^2.670.0",
+    "body-parser": "^1.19.0",
+    "config": "^3.3.1",
+    "express": "^4.17.1",
+    "express-group-routes": "^1.1.0",
+    "serverless-http": "^2.3.2",
+    "serverless-offline": "^6.1.5",
+    "swagger-ui-express": "^4.1.4",
+    "uuid": "^8.0.0"
+  },
+  "jest": {
+    "clearMocks": true,
+    "roots": [
+      "__tests__"
+    ],
+    "setupFiles": [
+      "<rootDir>/jest.setup.js"
+    ],
+    "verbose": true
+  },
+  "eslintConfig": {
+    "env": {
+      "jest": true
+    },
+    "extends": [
+      "airbnb"
+    ],
+    "plugins": [
+      "jest"
+    ]
+  },
+  "devDependencies": {
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb": "^18.1.0",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-jest": "^23.9.0",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.19.0",
+    "eslint-plugin-react-hooks": "^2.5.0",
+    "jest": "^26.0.1",
+    "serverless-dynamodb-local": "^0.2.39"
+  }
+}
